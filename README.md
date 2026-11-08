@@ -1,94 +1,61 @@
-# 🌱 Groww AI Discovery Engine & Executive Product Deck
-
-> **SIP Retention & Continuity Intelligence Platform**  
-> Synthesizing **3,420 retail investor reviews** across Google Play, Reddit India, App Store, YouTube, TradingQ&A, and Social Media using **Groq Llama-3.3-70B** and **FAISS Vector RAG**.
+# Groww Prototype — Deployed AI-Native MVP
+> **Part 5 Capstone:** Eval-Gated SIP Continuity & Habit Preservation Engine for First-Time Mutual Fund Investors.
 
 ---
 
-## 🔗 Quick Links & Live Demos
-
-- **Live Application (AI Discovery Engine):** [https://groww-review-ai.streamlit.app](https://groww-review-ai.streamlit.app)
-- **Google Drive Demo Video Folder:** [https://drive.google.com/drive/folders/17ILnWf9KcG-DlCeDNdqptIYSp2wL1tNB?usp=sharing](https://drive.google.com/drive/folders/17ILnWf9KcG-DlCeDNdqptIYSp2wL1tNB?usp=sharing)
-- **Downloadable 10-Slide Deck:** `NL_Groww.pdf` (< 40 MB vector PDF, strict Figma 26px / PPT 14pt typography)
-
----
-
-## 🚀 Key Modules
-
-### 1. ⚡ Automated Synthesis Workflow
-- **Live Empirical Pipeline:** Real-time review filtering and thematic classification.
-- **Dynamic Horizon Charts:** Proportional distribution across 5 core continuity breakdown themes:
-  1. *Salary Clash & Bounce Penalty* (35%)
-  2. *Mandate Lock & Freeze* (22.5%)
-  3. *Micro-Corpus Fatigue* (15%)
-  4. *Pause Amnesia* (7.5%)
-  5. *Volatility Anxiety* (5%)
-- **Source Configurator:** Dynamic platform IDs mapped to official bundle and community IDs (`com.nextbillion.groww`, `r/IndiaInvestments`, etc.).
-
-### 2. 💬 Research RAG Chat (Llama-3.3-70B)
-- Grounded conversational QA against all **3,420 review records**.
-- Provides multi-source attribution, real user quotes, and actionable product recommendations.
-
-### 3. 🔍 Full Review Explorer
-- Multi-token keyword search and cross-channel filtering across 3,420 authentic retail investor records.
-
-### 4. 📊 10-Slide Executive Presentation Deck
-- Built-in slide deck with keyboard navigation (<kbd>←</kbd> / <kbd>→</kbd> / <kbd>Space</kbd>).
-- Strict typography compliance (Plus Jakarta Sans & JetBrains Mono embedded natively).
-- 1-click **NL_Groww.pdf** export and print functionality.
+## 🚀 Live Demo & Deployment
+- **Deployed Applet:** [https://kavyadevarakonda.github.io/Groww-Prototype-AI-Native-MVP/](https://kavyadevarakonda.github.io/Groww-Prototype-AI-Native-MVP/)
+- **10-Slide Deck & PDF:** Click **"10 Slide Deck"** in the top bar to inspect slides or download `NL_Groww.pdf`.
+- **AI Discovery Engine:** Ingestion workbench of 3,420 multi-channel user reviews (Play Store, App Store, Reddit, MouthShut, Trustpilot).
+- **AI Evidence Log:** Hand-labeled 20-item Golden Set validation benchmark and audit logs.
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Frontend:** React 19, TypeScript, Vite, Tailwind CSS v4, Lucide Icons
-- **PDF Engine:** jsPDF, html-to-image with native SVG foreignObject rasterization
-- **Python Edition:** Streamlit (`streamlit_app.py`), Pandas, Plotly
+## 🎯 The Problem
+Groww onboards millions of first-time retail investors effortlessly. However, **more than 40% of first-time SIPs lapse within the first 12 months**.
+Our primary user research (6 in-depth persona investigations & 62 quantitative validations) and 3,420 review analysis revealed the root driver:
+- **Temporary Liquidity Shocks & Payroll Mismatches (70%+):** First-time salaried starters face cashflow fluctuations (delayed salaries, unexpected medical costs, festival expenses).
+- **The Rigid Non-AI Failure Mode:** Legacy banking auto-debits try to debit on a fixed date regardless of bank balance. When it fails, users are hit with **₹250–₹590 penal bank charges**. Terrified and confused, users choose the only visible action: **"Cancel SIP"**.
 
 ---
 
-## 💻 How to Run Locally
+## 🧠 Where AI Earns Its Place
+1. **Unstructured Human Distress to Execution Parameters:**
+   Investors don't speak banking jargon (NACH presentation cycles, clearing lag). When salary is delayed by 3–5 days, AI parses natural, unformatted human distress (*"salary pushed back to 8th"*, *"bonus delayed"*) and synthesizes immediate non-destructive schedule adjustments without intimidating multi-step forms.
+2. **Real-Time Regulatory Eval-Gate (<50ms):**
+   SEBI regulations strictly prohibit non-registered financial advice. Every generation is passed through a synchronous Eval-Gate with:
+   - **Zero-Advice Check:** Prohibits fund recommendations and return forecasts.
+   - **Zero-FOMO Check:** Prohibits fear-based retention tactics.
+   - **NPCI Feasibility Check:** Verifies bank clearing feasibility within T-2 cutoffs.
+3. **Deterministic Safe Fallbacks:**
+   When an adversarial or speculative query is detected (e.g. *"Should I switch to Small Cap?"*), the Eval-Gate blocks the response and deploys a certified non-advisory fallback directing users to official SEBI-registered resources.
+4. **Golden Set Benchmarking:**
+   Benchmarked against a 20-item hand-labeled Golden Set from the Evidence Log, achieving 100% agreement on regulatory non-advisory boundaries.
 
-### React / TypeScript Web App
+---
+
+## 🛠 Tech Stack
+- **Framework:** React 19, TypeScript, Vite
+- **Styling:** Tailwind CSS
+- **Icons & Assets:** Lucide React, Custom 3D SVG Vector graphics
+- **Exporting:** jsPDF, html2canvas-pro, toJpeg (ForeignObject native font embedding)
+
+---
+
+## 📦 Local Development
+
 ```bash
 # 1. Install dependencies
-npm install
+npm install --legacy-peer-deps
 
-# 2. Start development server
+# 2. Run local development server
 npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Streamlit Python Edition
-```bash
-# 1. Install Python packages
-pip install -r requirements.txt
-
-# 2. Run Streamlit app
-streamlit run streamlit_app.py
+# 3. Build for production (outputs to /dist and /docs)
+npm run build
 ```
 
 ---
 
-## ☁️ Deployment Instructions
-
-### Deploy to GitHub
-```bash
-git init
-git add .
-git commit -m "Initial commit: Groww AI Discovery Engine & Executive Deck"
-git branch -M main
-git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
-git push -u origin main
-```
-
-### Deploy to Streamlit Community Cloud (Free)
-1. Go to [share.streamlit.io](https://share.streamlit.io) and log in with your GitHub account.
-2. Click **New app** and select your repository.
-3. Set the Main file path to `streamlit_app.py`.
-4. Click **Deploy**!
-
-### Deploy to Vercel (Free)
-1. Go to [vercel.com](https://vercel.com) and import your GitHub repository.
-2. Vercel automatically detects Vite and builds the project.
-3. Click **Deploy**!
+## 📄 License
+Apache-2.0

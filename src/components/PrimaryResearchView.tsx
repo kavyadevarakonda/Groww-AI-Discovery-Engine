@@ -14,7 +14,7 @@ import {
 import { RESEARCH_PARTICIPANTS, QUANT_SURVEY_STATS } from '../data/researchData';
 import { CuteAvatar, SparkleCluster } from './CuteAssets';
 
-export const PrimaryResearchView: React.FC = () => {
+export const PrimaryResearchView: React.FC<{ onBackToMvp?: () => void }> = ({ onBackToMvp }) => {
   const [selectedUser, setSelectedUser] = useState<string>('U1');
 
   const activeParticipant = RESEARCH_PARTICIPANTS.find(u => u.id === selectedUser) || RESEARCH_PARTICIPANTS[0];
@@ -29,9 +29,19 @@ export const PrimaryResearchView: React.FC = () => {
               <Users className="w-5 h-5" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900 tracking-tight">
-                Primary Qualitative & Quantitative Research
-              </h1>
+              <div className="flex items-center gap-2">
+                <h1 className="text-xl font-bold text-slate-900 tracking-tight">
+                  Primary Qualitative & Quantitative Research
+                </h1>
+                {onBackToMvp && (
+                  <button
+                    onClick={onBackToMvp}
+                    className="px-2.5 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-[11px] font-bold border border-emerald-200 transition-colors cursor-pointer"
+                  >
+                    ← Back to MVP Prototype
+                  </button>
+                )}
+              </div>
               <p className="text-xs text-slate-500 mt-0.5">
                 6 In-Depth First-Time Investor Behavioral Investigations & 62 Quantitative Survey Validations.
               </p>
